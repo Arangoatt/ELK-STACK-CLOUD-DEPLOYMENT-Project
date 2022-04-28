@@ -91,7 +91,7 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
 - What is the main advantage of automating configuration with Ansible?
-  - **_Ther are multiple advantages, Ansible lets you quickly and easily deploy multitier applications throug a YAML playbook._**
+  - **_Ansible lets you easily deploy multitier applications throug a YAML playbook over multiple VM's._**
   - **_You don't need to write custom code to automate your systems._**
   - **_Ansible will also figure out how to get your systems to the state you want them to be in._**
 
