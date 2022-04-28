@@ -51,17 +51,12 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 The configuration details of each machine may be found below.
 
-| Name             -| Function       -| IP Address                      -| Operating System  -|
-
-|-------------------|-----------------|-------------------------------------------------------|
-
-| Jump Box         -| Gateway        -| 10.0.0.4 / Dynamic              -| Linux             -|
-
-| Web-1            -| UbuntuServer   -| 10.0.0.5 / 20.92.106.69 - Static-| Linux             -|
-
-| Web-2            -| UbuntuServer   -| 10.0.0.6 / 20.92.106.69 - Static-| Linux             -|
-
-| ELKserver        -| UbuntuServer   -| 10.1.0.4 / Dynamic   -          -| Linux             -|
+|       Name        |     Function    |           IP Address             |  Operating System  |
+|-------------------|-----------------|----------------------------------|--------------------|
+| Jump Box          | Gateway         | 10.0.0.4 / 20.58.183.95          |      Linux         |
+| Web-1             | UbuntuServer    | 10.0.0.5 / 20.92.106.69 - Static |      Linux         |
+| Web-2             | UbuntuServer    | 10.0.0.6 / 20.92.106.69 - Static |      Linux         |
+| ELKserver         | UbuntuServer    | 10.1.0.4 /      Dynamic          |      Linux         |
 
 
 
@@ -84,7 +79,7 @@ Machines within the network can only be accessed by **_Workstation and Jump-Box-
 A summary of the access policies in place can be found in the table below.
 |        Name        |  Publicly Accessible  |          Allowed IP Addresses           |
 |--------------------|-----------------------|-----------------------------------------|
-| Jump Box           | Yes                   | 20.85.232.66 (Workstation IP on SSH 22) |
+| Jump Box           | Yes                   | 20.58.183.95 (Workstation IP on SSH 22) |
 | Web-1              | No                    | 10.0.0.4 on SSH 22                      |
 | Web-2              | No                    | 10.0.0.4 on SSH 22                      |
 | ELKserver          | No                    | Workstation MY Public IP using TCP 5601 |
