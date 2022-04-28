@@ -51,17 +51,17 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 The configuration details of each machine may be found below.
 
-| Name              | Function        | IP Address                       | Operating System   |
+| Name             -| Function       -| IP Address                      -| Operating System  -|
 
 |-------------------|-----------------|-------------------------------------------------------|
 
-| Jump Box          | Gateway         | 10.0.0.4 / Dynamic   -           | Linux              |
+| Jump Box         -| Gateway        -| 10.0.0.4 / Dynamic              -| Linux             -|
 
-| Web-1             | UbuntuServer    | 10.0.0.5 / 20.92.106.69 - Static | Linux              |
+| Web-1            -| UbuntuServer   -| 10.0.0.5 / 20.92.106.69 - Static-| Linux             -|
 
-| Web-2             | UbuntuServer    | 10.0.0.6 / 20.92.106.69 - Static | Linux              |
+| Web-2            -| UbuntuServer   -| 10.0.0.6 / 20.92.106.69 - Static-| Linux             -|
 
-| ELKserver         | UbuntuServer    | 10.1.0.4 / Dynamic   -           | Linux              |
+| ELKserver        -| UbuntuServer   -| 10.1.0.4 / Dynamic   -          -| Linux             -|
 
 
 
