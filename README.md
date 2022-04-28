@@ -36,7 +36,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly **_functional and available_**, in addition to restricting **_traffic_** to the network.
 
 - What aspect of security do load balancers protect?
-  - **_Load balancers add resiliency by rerouting live traffic from one server to another if a server falls prey to a DDoS attack or otherwise becomes unavailable._**
+  - **_Load balancers add a sort of cushion in case one of the hosting sites goes down we can still maintain a server/site by rerouting live traffic from one server to another if a server falls prey to a DDoS attack or otherwise becomes unavailable._**
 
 - What is the advantage of a jump box?
   - **_A Jump Box Provisioner is also important as it prevents Azure VMs from being exposed via a public IP Address. This allows us to do monitoring and logging on a single box. We can also restrict the IP addresses able to communicate with the Jump Box, as we've done here._**
@@ -195,7 +195,7 @@ SSH into the control node and follow the steps below:
 - Download Filebeat playbook usng this command: 
   - `curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml`
 - Copy the **_[Filebeat Config](https://github.com/Arangoatt/ELK-STACK-CLOUD-DEPLOYMENT-Project/blob/main/Ansible/Filebeat/filebeat_config.yml "Filebeat Configuration File")_** file to **_/etc/ansible_**
-- Update the **_filebeat-config.yml_** file to include the **_ELK private IP 10.1.0.4_** as below from root@9ddf6fe7eb3f:~# `nano /etc/ansible/filebeat-config.yml`
+- Update the **_filebeat-config.yml_** file to include the **_ELK private IP 10.1.0.4_** as below from root@5ff3se6rh5a3:~# `nano /etc/ansible/filebeat-config.yml`
 ```bash
 output.elasticsearch:
   # Boolean flag to enable or disable the output module.
@@ -222,7 +222,7 @@ setup.kibana:
 - Download Metricbeat playbook using this command:
   - `curl -L -O https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/files/metricbeat-config.yml`
 Copy the **_[Metricbeat Config](https://github.com/Arangoatt/ELK-STACK-CLOUD-DEPLOYMENT-Project/blob/main/Ansible/Metricbeat/metricbeat-config.yml "Metricbeat Configuration File")_** file to **_/etc/ansible_**
-- Update the **_metricbeat-config.yml_** file to include the **_ELK private IP 10.1.0.4_** as below from root@5ff3se6rh5a:~# `nano /etc/ansible/metricbeat-config.yml`
+- Update the **_metricbeat-config.yml_** file to include the **_ELK private IP 10.1.0.4_** as below from root@5ff3se6rh5a3:~# `nano /etc/ansible/metricbeat-config.yml`
 ```bash
 #============================== Kibana =====================================
 
@@ -281,16 +281,16 @@ As a **Bonus**, provide the specific commands the user will need to run to downl
 | `sudo docker container list -a`                  | list all docker containers                            |
 | `sudo docker start "container name"`             | start docker container "container name"               |
 |`sudo docker ps -a`                               |  list all active/inactive containers                  |
-|`sudo docker attach "container name"`             |  effectively sshing into the "container name" container |
+|`sudo docker attach "container name"`             |effectively sshing into the "container name" container |
 |`cd /etc/ansible`                                 | Change directory to the Ansible directory             |
-|`ls -laA`                                         | List all file in directory (including hidden)         |
+|`ls -la`                                          | List all file in directory (including hidden)         |
 |`nano /etc/ansible/hosts`                         |  to edit the hosts file                               |
 |`nano /etc/ansible/ansible.cfg`                   |  to edit the ansible.cfg file                         |
 |`nano /etc/ansible/pentest.yml`                   |  to edit the My-Playbook                              |
 |`ansible-playbook [location][filename]`           |  to run the playbook                                  |
 |`sudo lsof /var/lib/dpkg/lock-frontend`           | unlocking a locked file                               |
 |`ssh ansible@Web-1 IP address`                    |  to log into the Web-1 VM                             |
-|`ssh ansible@Web-2 IP address`                    |  to log into the Web-2 VM                             ||
+|`ssh ansible@Web-2 IP address`                    |  to log into the Web-2 VM                             |
 |`ssh ansible@ELKserver IP address`                |  to log into the ELKserver VM                         |
 |`exit`                                            | to exit out of docker containers/Jump-Box-Provisioners|
 |`nano /etc/ansible/ansible.cfg`                   |  to edit the ansible.cfg file                         |
