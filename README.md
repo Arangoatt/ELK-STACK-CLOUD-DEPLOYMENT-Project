@@ -178,7 +178,7 @@ Metericbeat will be used to monitor VM stats, per CPU core stats, per filesystem
 ## Using the Playbook  
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
-- Verify the Public IP address to see if it has changed. [What Is My IP?](https://ipv4.icanhazip.com/)
+- Verify the Public IP address to see if it has changed. [What Is My public IP?](https://ipv4.icanhazip.com/)
 - If changed then update the Security Rules that uses the My Public IPv4
 
 SSH into the control node and follow the steps below:
